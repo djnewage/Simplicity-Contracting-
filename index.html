@@ -10,6 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
@@ -22,13 +24,13 @@
          <a href="#!" class="brand-logo"><img src="logonew.png" alt="" ></a>
          <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
          <ul class="right hide-on-med-and-down animated bounceInDown">
-           <li><a href="#">Home</a></li>
+           <li><a href="index3.html">Home</a></li>
            <li><a href="#about">About</a></li>
            <li><a href="#services">Our Services</a></li>
            <li><a href="#contact">Contact</a></li>
          </ul>
          <ul class="side-nav" id="mobile-demo">
-           <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+           <li><a href="index3.html"><i class="fas fa-home"></i>Home</a></li>
            <li><a href="#about"><i class="fas fa-info"></i>About</a></li>
            <li><a href="#services"><i class="fas fa-cogs"></i>Services</a></li>
            <li><a href="#contact"><i class="fas fa-phone"></i>Contact</a></li>
@@ -56,7 +58,7 @@
       <div id="services">
           <h2 class="e">Our Services</h2>
           <div class="row">
-              <div class="col s12 m6 l3">
+              <div class="col s12 m6 l3 " data-aos="fade-right">
                 <div class="card medium">
                   <div class="card-image">
                     <img class="materialboxed" src="IMG1.jpg">
@@ -68,7 +70,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l3">
+              <div class="col s12 m6 l3 "  data-aos="fade-left">
                 <div class="card medium">
                   <div class="card-image">
                     <img class="materialboxed" src="IMG2.jpg">
@@ -79,7 +81,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l3">
+              <div class="col s12 m6 l3" data-aos="fade-up-left">
                 <div class="card medium">
                   <div class="card-image">
                     <img class="materialboxed" src="IMG6.jpg">
@@ -90,7 +92,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l3">
+              <div class="col s12 m6 l3 " data-aos="fade-up-right">
                 <div class="card medium">
                   <div class="card-image">
                     <img class="materialboxed" src="IMG5.jpg">
@@ -103,35 +105,31 @@
               </div>
       </div>
   </section>
-  <div id="contact">
-      <footer class="page-footer blue lighten-3">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+<section id="contact">
+	<div class="contact-cards">
+		<div>
+			<i class="fas fa-envelope fa-2x animated bounceInLeft"></i><span>Email</span>
+			<p>Simplicitycontracting@gmail.com</p>
+		</div>
+		<div>
+			<i class="fas fa-mobile-alt fa-2x animated bounceInRight"></i><span>Contact</span>
+			<p>1-414-321-5588</p>
+		</div>
+	</div>
+	<div id="contact-form" class="animated bounceInLeft">
+		<h1>Contact Us</h1>
+		<form action="https://formspree.io/tristansacotte@gmail.com" method="post">
+			<input type="text" name="First name" value="" placeholder="First Name">
+			<input type="text" name="Last name" value="" placeholder="Last Name">
+			<br>
+			<input type="text" name="Your Email" value="" placeholder="Your Email">
+			<br>
+			<input type="text" name="Your Message" value="" placeholder="Your Message">
+			<button class="btn" type="submit" name="button">Submit</button>
+		</form>
+	</div>
+</section>
 
-  </div>
-  
 
 
   <script>
@@ -145,6 +143,9 @@
   </script>
   <script>
       var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script>
+      AOS.init();
     </script>
 </body>
 </html>
